@@ -11,8 +11,8 @@
       ../../modules/users.nix
       ../../modules/roles/laptop.nix
       ../../modules/roles/development.nix
+      ../../modules/roles/workstation.nix
       ../../modules/base.nix
-      ../../modules/capabilities/graphical.nix
     ];
 
   # Use the systemd-boot EFI boot loader.

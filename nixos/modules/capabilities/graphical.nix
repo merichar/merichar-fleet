@@ -31,8 +31,7 @@
     freecad
     kicad
 
-    # Desktop utilities
-    blueman
+    # Graphical utilities
     dunst
     filezilla
     kitty
