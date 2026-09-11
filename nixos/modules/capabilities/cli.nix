@@ -42,6 +42,7 @@
     ipmitool
     lshw
     lsof
+    macchina
     mtdutils
     nvme-cli
     pciutils

@@ -9,8 +9,9 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../../modules/users.nix
+      ../../modules/roles/laptop.nix
+      ../../modules/roles/development.nix
       ../../modules/base.nix
-      ../../modules/cli.nix
       ../../modules/capabilities/graphical.nix
     ];
 
@@ -20,6 +21,10 @@
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
+
+  # This host has an Intel CPU; thermal management is not generic to every
+  # laptop in the fleet.
+  services.thermald.enable = true;
 
   # Keep flake-based administration available after the initial bootstrap.
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
