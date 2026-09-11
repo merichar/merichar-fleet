@@ -8,6 +8,10 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ../../modules/users.nix
+      ../../modules/base.nix
+      ../../modules/cli.nix
+      ../../modules/capabilities/graphical.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -65,16 +69,6 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.merichar = {
-     isNormalUser = true;
-     extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
-     packages = with pkgs; [
-       git
-       tree
-     ];
-   };
 
   # programs.firefox.enable = true;
 
