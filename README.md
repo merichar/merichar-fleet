@@ -21,4 +21,12 @@ sudo nixos-rebuild --extra-experimental-features "nix-command flakes" test --fla
 sudo nixos-rebuild switch --flake ".#rizzorat"
 ```
 
-Run `switch` only after `test` succeeds. The initial `rizzorat` configuration intentionally preserves the known-working installed configuration; shared modules should be extracted afterward.
+Run `switch` only after `test` succeeds. Host configurations describe each
+machine, while fleet-local modules contain configuration shared by the hosts
+that import them.
+
+## Project development
+
+See [Per-project Nix development environments](docs/project-development.md)
+for a copyable flake and Direnv example. Project flakes remain independent of
+this fleet repository and of one another.
