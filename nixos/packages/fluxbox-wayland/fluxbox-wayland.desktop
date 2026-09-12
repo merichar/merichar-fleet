@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Fluxbox Wayland
+Comment=Fluxbox-compatible Wayland compositor
+Exec=startfluxbox-wayland
+Type=Application
+DesktopNames=Fluxbox

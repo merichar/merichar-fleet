@@ -71,6 +71,7 @@
     cookiecutter
     gdb
     graphviz
+    nixfmt
     pkg-config
     rlwrap
     strace

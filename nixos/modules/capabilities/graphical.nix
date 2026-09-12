@@ -3,6 +3,10 @@
 {
   # Interactive applications for graphical workstations. Servers and other
   # machines without a graphical session should not import this module.
+  # Kitty requires scalable fonts; this preserves the Terminus pixel-font
+  # character while remaining usable by modern Wayland applications.
+  fonts.packages = with pkgs; [ terminus_font_ttf ];
+
   environment.systemPackages = with pkgs; [
     # Web and communication
     firefox
