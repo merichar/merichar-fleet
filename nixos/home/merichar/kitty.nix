@@ -10,7 +10,7 @@
 
     font = {
       name = "Terminus (TTF)";
-      size = 15;
+      size = 17;
     };
 
     # Preserve the traditional block cursor and let Bash own the title, just as

@@ -33,7 +33,7 @@ session.screen0.toolbar.onhead: 1
 session.screen0.toolbar.tools: workspacename, prevworkspace, nextworkspace, iconbar, systemtray, prevwindow, nextwindow, clock
 session.screen0.toolbar.widthPercent: 75
 session.screen0.toolbar.visible: true
-session.screen0.toolbar.height: 18
+session.screen0.toolbar.height: 30
 session.screen0.tab.width: 100
 session.screen0.tab.placement: BottomLeft
 session.screen0.menuMode: Delay
