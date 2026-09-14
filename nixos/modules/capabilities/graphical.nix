@@ -1,5 +1,9 @@
 { pkgs, ... }:
 
+let
+  upowertray = pkgs.callPackage ../../packages/upowertray { };
+in
+
 {
   # Interactive applications for graphical workstations. Servers and other
   # machines without a graphical session should not import this module.
@@ -36,10 +40,13 @@
     kicad
 
     # Graphical utilities
+    diodon
     dunst
     filezilla
     kitty
+    pasystray
     pavucontrol
     thunar
+    upowertray
   ];
 }

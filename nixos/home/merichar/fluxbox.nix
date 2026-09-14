@@ -1,14 +1,26 @@
 { ... }:
 
 {
-  home.file.".fluxbox/startup" = {
-    executable = true;
-    text = ''
-      #!/bin/sh
+  # Manage behavior now; style and wallpaper remain separate.
+  home.file = {
+    ".fluxbox/apps".source = ./fluxbox/apps;
+    ".fluxbox/init".source = ./fluxbox/init;
+    ".fluxbox/keys".source = ./fluxbox/keys;
+    ".fluxbox/menu".source = ./fluxbox/menu;
+    ".fluxbox/overlay".source = ./fluxbox/overlay;
+    ".fluxbox/slitlist".source = ./fluxbox/slitlist;
+    ".fluxbox/startup" = {
+      executable = true;
+      source = ./fluxbox/startup;
+    };
+    ".fluxbox/windowmenu".source = ./fluxbox/windowmenu;
+  };
 
-      # Keep the first Wayland activation minimal. Session services and legacy
-      # dockapps are added after the compositor itself is verified.
-      exec fluxbox-wayland --terminal kitty
-    '';
+  dconf.settings = {
+    "net/launchpad/diodon/clipboard" = {
+      add-images = true;
+      synchronize-clipboards = true;
+      use-primary = true;
+    };
   };
 }

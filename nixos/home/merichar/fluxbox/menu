@@ -1,0 +1,13 @@
+[begin] (Fluxbox)
+  [exec] (Run...) {fbrun}
+  [exec] (Terminal) {kitty}
+  [exec] (Browser) {firefox}
+  [exec] (Files) {thunar}
+  [exec] (Editor) {emacs}
+  [separator]
+  [workspaces] (Workspaces)
+  [config] (Fluxbox Configuration)
+  [reconfig] (Reload configuration)
+  [restart] (Restart Fluxbox)
+  [exit] (Exit)
+[end]

@@ -149,54 +149,13 @@
       ".html.erb" = "00;37";
     };
 
+    # Keep this list limited to terminal types used by the fleet. The old
+    # generated list covered historical terminals that are no longer relevant.
     extraConfig = ''
-      TERM Eterm
-      TERM ansi
-      TERM color-xterm
-      TERM con132x25
-      TERM con132x30
-      TERM con132x43
-      TERM con132x60
-      TERM con80x25
-      TERM con80x28
-      TERM con80x30
-      TERM con80x43
-      TERM con80x50
-      TERM con80x60
-      TERM cons25
-      TERM console
-      TERM cygwin
-      TERM dtterm
-      TERM eterm-color
-      TERM gnome
-      TERM gnome-256color
-      TERM jfbterm
-      TERM konsole
-      TERM kterm
       TERM linux
-      TERM linux-c
-      TERM mach-color
-      TERM mlterm
-      TERM putty
-      TERM rxvt
-      TERM rxvt-256color
-      TERM rxvt-cygwin
-      TERM rxvt-cygwin-native
-      TERM rxvt-unicode
-      TERM rxvt-unicode256
       TERM screen
       TERM screen-256color
-      TERM screen-256color-bce
-      TERM screen-bce
-      TERM screen-w
-      TERM screen.linux
-      TERM vt100
-      TERM xterm
-      TERM xterm-16color
       TERM xterm-256color
-      TERM xterm-88color
-      TERM xterm-color
-      TERM xterm-debian
       TERM xterm-kitty
     '';
   };
