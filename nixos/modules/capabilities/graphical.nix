@@ -48,5 +48,6 @@ in
     pavucontrol
     thunar
     upowertray
+    wev
   ];
 }
