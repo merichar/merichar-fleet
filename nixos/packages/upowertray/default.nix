@@ -8,7 +8,7 @@ stdenv.mkDerivation {
     owner = "BenGWeeks";
     repo = "upowertray";
     rev = "6e329ab7e2950aee059a9d6668570998f320d33b";
-    hash = "sha256-kDR0EMyjlgF90ZMtXa/d5MaE4l4jbpER0Q4A+zpngCI=";
+    hash = "sha256-/XSF89M3TkNNCTvSzKCLLZAnvS8PyE20Hinifj3bP6I=";
   };
 
   nativeBuildInputs = [ cmake ];
