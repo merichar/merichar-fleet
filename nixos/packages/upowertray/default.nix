@@ -1,4 +1,4 @@
-{ cmake, fetchFromGitHub, lib, qt6, stdenv }:
+{ cmake, fetchFromGitHub, lib, qt6, stdenv, wrapQtAppsHook }:
 
 stdenv.mkDerivation {
   pname = "upowertray";
@@ -11,7 +11,7 @@ stdenv.mkDerivation {
     hash = "sha256-/XSF89M3TkNNCTvSzKCLLZAnvS8PyE20Hinifj3bP6I=";
   };
 
-  nativeBuildInputs = [ cmake ];
+  nativeBuildInputs = [ cmake wrapQtAppsHook ];
   buildInputs = [ qt6.qtbase ];
 
   meta = {
