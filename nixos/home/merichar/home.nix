@@ -1,10 +1,18 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   imports = [
     ./bash.nix
     ./dircolors.nix
   ];
+
+  gtk = {
+    enable = true;
+    iconTheme = {
+      package = pkgs.papirus-icon-theme;
+      name = "Papirus-Dark";
+    };
+  };
 
   home.username = "merichar";
   home.homeDirectory = "/home/merichar";
