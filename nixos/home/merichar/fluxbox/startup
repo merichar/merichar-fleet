@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # TTY-launched sessions do not process XDG autostart files.
-fluxbox-wayland --terminal kitty &
+fluxbox-wayland --config-dir "$HOME/.fluxbox" --terminal kitty &
 fluxbox_pid=$!
 
 sleep 2

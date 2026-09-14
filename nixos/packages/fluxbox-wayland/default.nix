@@ -29,6 +29,18 @@ stdenv.mkDerivation {
 
   strictDeps = true;
 
+  # An explicit keys file owns the shortcuts, including after reconfiguration.
+  postPatch = ''
+    substituteInPlace src/wayland/fbwl_server_bootstrap.c \
+      --replace-fail \
+      'fbwl_keybindings_add_defaults(&server->keybindings, &server->keybinding_count, server->terminal_cmd);' \
+      'if (keys_file == NULL) fbwl_keybindings_add_defaults(&server->keybindings, &server->keybinding_count, server->terminal_cmd);'
+    substituteInPlace src/wayland/fbwl_server_reconfigure.c \
+      --replace-fail \
+      'fbwl_keybindings_add_defaults(&server->keybindings, &server->keybinding_count, server->terminal_cmd);' \
+      'if (keys_file == NULL) fbwl_keybindings_add_defaults(&server->keybindings, &server->keybinding_count, server->terminal_cmd);'
+  '';
+
   nativeBuildInputs = [
     autoreconfHook
     gettext
