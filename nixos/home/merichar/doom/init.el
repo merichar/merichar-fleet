@@ -48,7 +48,7 @@
        :lang
        emacs-lisp
        json
-       javascript
+       (javascript +tree-sitter)
        latex
        markdown
        (nix +tree-sitter)

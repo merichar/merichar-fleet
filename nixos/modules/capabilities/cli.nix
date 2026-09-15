@@ -17,6 +17,7 @@
     antiword
     bc
     dos2unix
+    fd
     htop
     html-tidy
     hxtools

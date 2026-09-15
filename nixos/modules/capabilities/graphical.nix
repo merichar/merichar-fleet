@@ -9,7 +9,10 @@ in
   # machines without a graphical session should not import this module.
   # Kitty requires scalable fonts; this preserves the Terminus pixel-font
   # character while remaining usable by modern Wayland applications.
-  fonts.packages = with pkgs; [ terminus_font_ttf ];
+  fonts.packages = with pkgs; [
+    nerd-fonts.symbols-only
+    terminus_font_ttf
+  ];
 
   environment.systemPackages = with pkgs; [
     # Web and communication
