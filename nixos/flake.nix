@@ -29,6 +29,11 @@
         ./hosts/rizzorat/configuration.nix
         home-manager.nixosModules.home-manager
         {
+          nixpkgs.config.allowUnfreePredicate = pkg:
+            builtins.elem (nixpkgs.lib.getName pkg) [
+              "claude-code"
+            ];
+
           # Preserve pre-existing dotfiles the first time Home Manager takes
           # ownership of them so the migration remains reversible.
           home-manager.backupFileExtension = "pre-home-manager";
