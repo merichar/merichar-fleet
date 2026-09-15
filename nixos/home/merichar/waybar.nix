@@ -1,9 +1,9 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   programs.waybar = {
     enable = true;
-    package = null;
+    package = pkgs.waybar;
 
     settings = {
       mainBar = {
