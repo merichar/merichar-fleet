@@ -20,6 +20,7 @@
   home.sessionPath = [
     "$HOME/bin"
     "$HOME/.local/bin"
+    "$HOME/.config/emacs/bin"
   ];
 
   # This controls Home Manager compatibility defaults, not package versions.
