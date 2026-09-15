@@ -8,6 +8,7 @@
     ../capabilities/graphical.nix
     ../capabilities/keyboard.nix
     ../capabilities/printing.nix
+    ../capabilities/thunderbolt.nix
     ../capabilities/vpn.nix
   ];
 
