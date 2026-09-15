@@ -11,7 +11,7 @@
         position = "top";
         height = 30;
         modules-left = [ "clock" ];
-        modules-right = [ "battery" "network" "bluetooth" "pulseaudio" "tray" ];
+        modules-right = [ "battery" "network" "bluetooth" "pulseaudio" ];
 
         clock = {
           format = "{:%m/%d %H:%M}";
@@ -36,6 +36,7 @@
           format = "{status} ";
           format-disabled = "off ";
           format-connected = "{num_connections} ";
+          on-click = "blueman-manager";
         };
 
         pulseaudio = {
@@ -44,11 +45,7 @@
           format-icons = {
             default = [ "" "" "" ];
           };
-        };
-
-        tray = {
-          icon-size = 18;
-          spacing = 8;
+          on-click = "pavucontrol";
         };
       };
     };
@@ -66,7 +63,7 @@
         color: #c9d1d9;
       }
 
-      #clock, #battery, #network, #bluetooth, #pulseaudio, #tray {
+      #clock, #battery, #network, #bluetooth, #pulseaudio {
         padding: 0 10px;
       }
     '';
