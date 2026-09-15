@@ -6,5 +6,6 @@
     ./fluxbox.nix
     ./home.nix
     ./kitty.nix
+    ./waybar.nix
   ];
 }

@@ -18,6 +18,7 @@ start_once blueman-applet
 start_once diodon
 start_once pasystray
 start_once upowertray
+start_once waybar
 
 # Legacy dockapps use XWayland.
 wait "$fluxbox_pid"

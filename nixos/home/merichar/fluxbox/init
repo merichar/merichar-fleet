@@ -23,15 +23,15 @@ session.screen0.window.focus.alpha: 255
 session.screen0.window.unfocus.alpha: 255
 session.screen0.toolbar.workspace.borderWidth: 20
 session.screen0.toolbar.alpha: 255
-session.screen0.toolbar.placement: TopCenter
+session.screen0.toolbar.placement: BottomCenter
 session.screen0.toolbar.onTop: false
 session.screen0.toolbar.maxOver: false
 session.screen0.toolbar.autoRaise: false
 session.screen0.toolbar.autoHide: false
 session.screen0.toolbar.layer: AboveDock
 session.screen0.toolbar.onhead: 1
-session.screen0.toolbar.tools: workspacename, prevworkspace, nextworkspace, iconbar, systemtray, prevwindow, nextwindow, clock
-session.screen0.toolbar.widthPercent: 98
+session.screen0.toolbar.tools: workspacename, prevworkspace, nextworkspace, iconbar, prevwindow, nextwindow
+session.screen0.toolbar.widthPercent: 100
 session.screen0.toolbar.visible: true
 session.screen0.toolbar.height: 30
 session.screen0.tab.width: 100

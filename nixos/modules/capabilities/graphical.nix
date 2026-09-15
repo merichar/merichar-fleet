@@ -34,6 +34,7 @@ in
     kdePackages.kdenlive
     obs-studio
     vlc
+    waybar
 
     # CAD and electronics
     freecad
