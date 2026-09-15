@@ -1,9 +1,13 @@
 { doom-emacs, ... }:
 
 {
+  # The pinned Doom source is read-only in /nix/store; keep Doom's generated
+  # packages, profiles, and cache in the user's writable state directory.
+  home.sessionVariables.DOOMLOCALDIR = "$HOME/.local/share/doom";
+
   xdg.configFile = {
-    # Link the pinned upstream tree recursively so Doom's .local directory can
-    # remain writable and machine-local.
+    # Link the pinned upstream tree recursively; mutable Doom state is kept in
+    # DOOMLOCALDIR above rather than beside the read-only source.
     "emacs" = {
       source = doom-emacs;
       recursive = true;
