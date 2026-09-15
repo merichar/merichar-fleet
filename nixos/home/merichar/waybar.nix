@@ -29,6 +29,7 @@
           format-ethernet = "{ifname} 󰈀";
           format-disconnected = "offline";
           tooltip-format = "{ifname}: {ipaddr}/{cidr}";
+          on-click = "nm-connection-editor";
         };
 
         bluetooth = {

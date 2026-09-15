@@ -13,7 +13,6 @@ start_once() {
 
 # Status applets and notifications.
 start_once dunst
-start_once nm-applet --indicator
 start_once blueman-applet
 start_once diodon
 start_once pasystray
