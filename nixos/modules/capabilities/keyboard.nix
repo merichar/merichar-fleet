@@ -1,8 +1,7 @@
 { ... }:
 
 {
-  # Use the same keymap for the console and graphical sessions. Fluxbox-Wayland
-  # reads the XKB_DEFAULT_* variables when it creates its Wayland keymap.
+  # Use the same keymap for the console and X11 sessions.
   services.xserver.xkb = {
     layout = "us";
     variant = "dvorak";
@@ -11,9 +10,4 @@
 
   console.useXkbConfig = true;
 
-  environment.sessionVariables = {
-    XKB_DEFAULT_LAYOUT = "us";
-    XKB_DEFAULT_VARIANT = "dvorak";
-    XKB_DEFAULT_OPTIONS = "ctrl:nocaps";
-  };
 }

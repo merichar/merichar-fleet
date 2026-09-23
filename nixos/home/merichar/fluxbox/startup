@@ -1,19 +1,12 @@
 #!/bin/sh
 
-# TTY-launched sessions do not process XDG autostart files.
-fluxbox-wayland --config-dir "$HOME/.fluxbox" --terminal kitty &
-fluxbox_pid=$!
-
-sleep 2
-
 start_once() {
   command -v "$1" >/dev/null 2>&1 || return 0
   pgrep -u "$USER" -x "$1" >/dev/null 2>&1 || "$@" &
 }
 
-# Status applets and notifications.
+# Status bar and notifications.
 start_once dunst
 start_once waybar
 
-# Legacy dockapps use XWayland.
-wait "$fluxbox_pid"
+exec fluxbox

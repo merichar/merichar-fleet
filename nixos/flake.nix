@@ -15,16 +15,11 @@
       flake = false;
     };
 
-    fluxbox-wayland = {
-      url = "github:pepperpepperpepper/fluxbox-wayland/5bffe95775b1409b91a3e91af152ce750f6e883a";
-      flake = false;
-    };
   };
 
-  outputs = { doom-emacs, fluxbox-wayland, home-manager, nixpkgs, ... }: {
+  outputs = { doom-emacs, home-manager, nixpkgs, ... }: {
     nixosConfigurations.rizzorat = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      specialArgs = { inherit fluxbox-wayland; };
       modules = [
         ./hosts/rizzorat/configuration.nix
         home-manager.nixosModules.home-manager

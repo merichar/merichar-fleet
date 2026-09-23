@@ -17,23 +17,6 @@
         "type": "github"
       }
     },
-    "fluxbox-wayland": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1771488792,
-        "narHash": "sha256-0Dr8KLW8QrsBZmp0TJJSlGpAs9WevVzScwQ+Gp8P6h8=",
-        "owner": "pepperpepperpepper",
-        "repo": "fluxbox-wayland",
-        "rev": "5bffe95775b1409b91a3e91af152ce750f6e883a",
-        "type": "github"
-      },
-      "original": {
-        "owner": "pepperpepperpepper",
-        "repo": "fluxbox-wayland",
-        "rev": "5bffe95775b1409b91a3e91af152ce750f6e883a",
-        "type": "github"
-      }
-    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -74,7 +57,6 @@
     "root": {
       "inputs": {
         "doom-emacs": "doom-emacs",
-        "fluxbox-wayland": "fluxbox-wayland",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs"
       }

@@ -52,6 +52,6 @@ in
     pavucontrol
     thunar
     upowertray
-    wev
+    xorg.xev
   ];
 }

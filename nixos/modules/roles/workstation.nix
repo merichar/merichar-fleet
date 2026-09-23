@@ -4,7 +4,7 @@
   imports = [
     ../capabilities/audio.nix
     ../capabilities/bluetooth.nix
-    ../capabilities/fluxbox-wayland.nix
+    ../capabilities/fluxbox.nix
     ../capabilities/graphical.nix
     ../capabilities/keyboard.nix
     ../capabilities/printing.nix
