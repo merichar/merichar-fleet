@@ -30,7 +30,7 @@ session.screen0.toolbar.autoRaise: false
 session.screen0.toolbar.autoHide: false
 session.screen0.toolbar.layer: AboveDock
 session.screen0.toolbar.onhead: 1
-session.screen0.toolbar.tools: workspacename, prevworkspace, nextworkspace, iconbar, prevwindow, nextwindow
+session.screen0.toolbar.tools: workspacename, prevworkspace, nextworkspace, iconbar, prevwindow, nextwindow, systemtray, clock
 session.screen0.toolbar.widthPercent: 100
 session.screen0.toolbar.visible: true
 session.screen0.toolbar.height: 30

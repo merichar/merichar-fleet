@@ -5,8 +5,11 @@ start_once() {
   pgrep -u "$USER" -x "$1" >/dev/null 2>&1 || "$@" &
 }
 
-# Status bar and notifications.
+# Fluxbox's toolbar owns the system tray.
 start_once dunst
-start_once waybar
+start_once diodon
+start_once blueman-applet
+start_once pasystray
+start_once upowertray
 
 exec fluxbox

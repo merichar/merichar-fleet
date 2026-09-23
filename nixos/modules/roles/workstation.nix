@@ -13,7 +13,10 @@
   ];
 
   programs.dconf.enable = true;
-  programs.nm-applet.enable = true;
+  programs.nm-applet = {
+    enable = true;
+    indicator = false;
+  };
 
   services.blueman.enable = true;
   services.gnome.gnome-keyring.enable = true;
