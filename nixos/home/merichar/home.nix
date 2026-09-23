@@ -14,6 +14,10 @@
     };
   };
 
+  xresources.properties = {
+    "Xft.dpi" = 140;
+  };
+
   home.username = "merichar";
   home.homeDirectory = "/home/merichar";
 

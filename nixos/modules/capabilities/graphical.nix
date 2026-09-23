@@ -53,7 +53,8 @@ in
     pavucontrol
     thunar
     upowertray
-    xorg.xev
+    xev
+    xrdb
 
     # Fluxbox slit monitors
     gkrellm

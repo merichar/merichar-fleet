@@ -5,6 +5,9 @@ start_once() {
   pgrep -u "$USER" -x "$1" >/dev/null 2>&1 || "$@" &
 }
 
+# Fluxbox is started from a TTY, so load Home Manager's X resources here.
+xrdb -merge "$HOME/.Xresources"
+
 # Fluxbox's toolbar owns the system tray.
 start_once dunst
 start_once diodon
