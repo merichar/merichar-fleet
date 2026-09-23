@@ -22,6 +22,15 @@ stdenv.mkDerivation {
   buildInputs = [ gkrellm gtk2 ];
 
   postPatch = ''
+    substituteInPlace gkrellm-bfm.c \
+      --replace-fail \
+        'cb_interval_modified(GtkWidget *widget, GtkSpinButton *spin)' \
+        'cb_interval_modified(GtkSpinButton *spin, gpointer data)' \
+      --replace-fail \
+        'update_interval = gtk_spin_button_get_value_as_int(spin);' \
+        '(void) data;
+        update_interval = gtk_spin_button_get_value_as_int(spin);'
+
     substituteInPlace Makefile \
       --replace-fail \
         'GTK2_CFLAGS = $(shell pkg-config gtk+-2.0 --cflags)' \
