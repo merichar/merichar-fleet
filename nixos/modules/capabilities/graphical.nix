@@ -2,13 +2,14 @@
 
 let
   upowertray = pkgs.callPackage ../../packages/upowertray { };
+  wmbubble = pkgs.callPackage ../../packages/wmbubble { };
+  gkrellmBfm = pkgs.callPackage ../../packages/gkrellm-bfm { };
 in
 
 {
   # Interactive applications for graphical workstations. Servers and other
   # machines without a graphical session should not import this module.
-  # Kitty requires scalable fonts; this preserves the Terminus pixel-font
-  # character while remaining usable by modern Wayland applications.
+  # Kitty requires scalable fonts; Terminus keeps the pixel-font character.
   fonts.packages = with pkgs; [
     nerd-fonts.symbols-only
     terminus_font_ttf
@@ -46,11 +47,17 @@ in
     diodon
     dunst
     filezilla
+    feh
     kitty
     pasystray
     pavucontrol
     thunar
     upowertray
     xorg.xev
+
+    # Fluxbox slit monitors
+    gkrellm
+    gkrellmBfm
+    wmbubble
   ];
 }

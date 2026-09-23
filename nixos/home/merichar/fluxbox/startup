@@ -11,5 +11,10 @@ start_once diodon
 start_once blueman-applet
 start_once pasystray
 start_once upowertray
+start_once gkrellm -w
+start_once wmbubble
+
+feh --no-fehbg --xinerama-index 0 --bg-max --image-bg '#333333' \
+  "$HOME/.local/share/wallpapers/linux.png" &
 
 exec fluxbox
