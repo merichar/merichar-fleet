@@ -11,5 +11,8 @@ in
     ".gkrellm2/sensor-config".source = ./gkrellm/sensor-config;
     ".gkrellm2/theme_config".source = ./gkrellm/theme_config;
     ".gkrellm2/themes/invisible-jkx".source = ./gkrellm/themes/invisible-jkx;
+    # The generated config contains per-device counters, which are intentionally
+    # omitted from this host-managed subset.
+    ".gkrellm2/user-config".source = ./gkrellm/user-config;
   };
 }
